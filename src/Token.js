@@ -36,6 +36,7 @@ export default class Token {
     static TYPE_WHITESPACE = "WHITESPACE";
     static TYPE_LABS = "LABSOLUTEVAL";
     static TYPE_RABS = "RABSOLUTEVAL";
+    // static TYPE_ABS = "ABSOLUTEVAL";
     static TYPE_BANG = "BANG";
     static TYPE_COMMA = "COMMA";
     static TYPE_POWER = "POWER";
@@ -44,6 +45,9 @@ export default class Token {
     static patterns = new Map([
         [Token.TYPE_LPAREN, /(\(|\[|{|\\left\(|\\left\[)/], // Match (, [, {, \left(, \left[
         [Token.TYPE_RPAREN, /(\)|]|}|\\right\)|\\right])/], // Match ), ], }, \right), \right]
+        [Token.TYPE_LABS, /\\left\|/],
+        [Token.TYPE_RABS, /\\right\|/],
+        // [Token.TYPE_LABS, /\|/],
         [Token.TYPE_PLUS, /\+/],
         [Token.TYPE_MINUS, /-/],
         [Token.TYPE_TIMES, /\*/],
@@ -51,8 +55,6 @@ export default class Token {
         [Token.TYPE_COMMAND, /\\[A-Za-z]+/],
         [Token.TYPE_SYMBOL, /[A-Za-z_][A-Za-z_0-9]*/],
         [Token.TYPE_WHITESPACE, /\s+/], // Whitespace
-        [Token.TYPE_LABS, /\\left\|/],
-        [Token.TYPE_RABS, /\\right\|/],
         [Token.TYPE_BANG, /!/],
         [Token.TYPE_COMMA, /,/],
         [Token.TYPE_POWER, /\^/],
