@@ -197,10 +197,10 @@ class Parser {
             node = this.sum();
             this.expect(Token.TYPE_RPAREN);
         }
-        else if (this.accept(Token.TYPE_ABS)) {
+        else if (this.accept(Token.TYPE_LABS)) {
             node = new Node(Node.TYPE_FUNCTION, Math.abs);
             node.addChild(this.sum());
-            this.expect(Token.TYPE_ABS);
+            this.expect(Token.TYPE_RABS);
         }
         else {
             throw "Unexpected " + this.currentToken.toString() + " at token " + this.cursor;
