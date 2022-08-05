@@ -3,8 +3,8 @@
     "version": "2.2.4",
     "description": "An ASCII and LaTeX math parser and evaluator",
     "main": "index.js",
-    "repository": "https://github.com/arthanzel/evaluatex.git",
-    "author": "Martin Hanzel <arthanzel@gmail.com>",
+    "repository": "https://github.com/loupe-co/evaluatex.git",
+    "author": "Outreach Commit",
     "license": "MIT",
     "private": false,
     "scripts": {
